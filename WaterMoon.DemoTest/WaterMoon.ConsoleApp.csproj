@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ADA243F2-7B91-41AD-9955-008FDE10A561}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{FDFC548B-5C6C-4F06-A8E4-9CF73BBDCEB6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WaterMoon.Services</RootNamespace>
-    <AssemblyName>WaterMoon.Services</AssemblyName>
+    <RootNamespace>WaterMoon.Console</RootNamespace>
+    <AssemblyName>WaterMoon.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,7 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,16 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Event\EventPublisher.cs" />
-    <Compile Include="Event\EventPublisherExtensions.cs" />
-    <Compile Include="Event\IConsumer.cs" />
-    <Compile Include="Event\IEventPublisher.cs" />
-    <Compile Include="Event\ISubscriptionService.cs" />
-    <Compile Include="Event\ModelCacheEventConsumer.cs" />
-    <Compile Include="Event\SubscriptionService.cs" />
-    <Compile Include="IServices\IDemoService.cs" />
+    <Compile Include="Dependency\DependencyRegistrar.cs" />
+    <Compile Include="Mapping\MappingRegisterExt.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Serivces\DemoService.cs" />
+    <Compile Include="EventConsumer\ConsoleEventConsumer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WaterMoon.AutoMapping\WaterMoon.AutoMapping.csproj">
@@ -63,7 +74,12 @@
       <Project>{dacd26b6-08b1-4a00-9f58-467607fa7125}</Project>
       <Name>WaterMoon.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WaterMoon.Services\WaterMoon.Services.csproj">
+      <Project>{ada243f2-7b91-41ad-9955-008fde10a561}</Project>
+      <Name>WaterMoon.Services</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

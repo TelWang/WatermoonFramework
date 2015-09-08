@@ -42,14 +42,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefualtMapper.cs" />
-    <Compile Include="DefualtMapping.cs" />
-    <Compile Include="IManualMapper.cs" />
-    <Compile Include="IMapping.cs" />
+    <Compile Include="MappingCore\DefualtMapper.cs" />
+    <Compile Include="MappingCore\DefualtMapping.cs" />
+    <Compile Include="ManualMappers\GuidToDemoMapping.cs" />
+    <Compile Include="MappingCore\IManualMapper.cs" />
+    <Compile Include="MappingCore\IMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WaterMoon.Core\WaterMoon.Core.csproj">
+      <Project>{68c6ae3c-788e-410b-b238-88444b39c245}</Project>
+      <Name>WaterMoon.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WaterMoon.Model\WaterMoon.Model.csproj">
+      <Project>{dacd26b6-08b1-4a00-9f58-467607fa7125}</Project>
+      <Name>WaterMoon.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

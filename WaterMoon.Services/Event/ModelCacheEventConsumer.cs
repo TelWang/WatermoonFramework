@@ -8,21 +8,21 @@ using WaterMoon.Core.Model;
 
 namespace WaterMoon.Services.Event
 {
-    public class ModelCacheEventConsumer : IConsumer<EntityInserted<TestMenu>>,
-        IConsumer<EntityUpdated<TestMenu>>,
-        IConsumer<EntityDeleted<TestMenu>>
+    public class ModelCacheEventConsumer : IConsumer<EntityInserted<DemoEntity>>,
+        IConsumer<EntityUpdated<DemoEntity>>,
+        IConsumer<EntityDeleted<DemoEntity>>
     {
-        public void HandleEvent(EntityInserted<TestMenu> eventMessage)
+        public void HandleEvent(EntityInserted<DemoEntity> eventMessage)
         { 
-        
+            
         }
 
-        public void HandleEvent(EntityUpdated<TestMenu> eventMessage)
+        public void HandleEvent(EntityUpdated<DemoEntity> eventMessage)
         {
 
         }
 
-        public void HandleEvent(EntityDeleted<TestMenu> eventMessage)
+        public void HandleEvent(EntityDeleted<DemoEntity> eventMessage)
         {
 
         }
