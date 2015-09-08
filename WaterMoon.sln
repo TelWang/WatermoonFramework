@@ -1,17 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterMoon.Core", "WaterMoon.Core\WaterMoon.Core.csproj", "{68C6AE3C-788E-410B-B238-88444B39C245}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterMoon.ConsoleApp", "WaterMoon.DemoTest\WaterMoon.ConsoleApp.csproj", "{FDFC548B-5C6C-4F06-A8E4-9CF73BBDCEB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterMoon.ConsoleApp", "WaterMoon.ConsoleApp\WaterMoon.ConsoleApp.csproj", "{FDFC548B-5C6C-4F06-A8E4-9CF73BBDCEB6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterMoon.Services", "WaterMoon.Services\WaterMoon.Services.csproj", "{ADA243F2-7B91-41AD-9955-008FDE10A561}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterMoon.AutoMapping", "WaterMoon.AutoMapping\WaterMoon.AutoMapping.csproj", "{6C31C6C2-E33A-40AA-9FCC-900224AC124D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterMoon.WebApp", "WaterMoon.WebApp\WaterMoon.WebApp.csproj", "{6BF7FB20-A6B2-4CC7-B34D-5F4F62283AE8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterMoon.Model", "WaterMoon.Model\WaterMoon.Model.csproj", "{DACD26B6-08B1-4A00-9F58-467607FA7125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterMoon.WebApp", "WaterMoon.WebApp\WaterMoon.WebApp.csproj", "{6BF7FB20-A6B2-4CC7-B34D-5F4F62283AE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,14 +37,14 @@ Global
 		{6C31C6C2-E33A-40AA-9FCC-900224AC124D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C31C6C2-E33A-40AA-9FCC-900224AC124D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C31C6C2-E33A-40AA-9FCC-900224AC124D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6BF7FB20-A6B2-4CC7-B34D-5F4F62283AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BF7FB20-A6B2-4CC7-B34D-5F4F62283AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BF7FB20-A6B2-4CC7-B34D-5F4F62283AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BF7FB20-A6B2-4CC7-B34D-5F4F62283AE8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DACD26B6-08B1-4A00-9F58-467607FA7125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DACD26B6-08B1-4A00-9F58-467607FA7125}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DACD26B6-08B1-4A00-9F58-467607FA7125}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DACD26B6-08B1-4A00-9F58-467607FA7125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BF7FB20-A6B2-4CC7-B34D-5F4F62283AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BF7FB20-A6B2-4CC7-B34D-5F4F62283AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BF7FB20-A6B2-4CC7-B34D-5F4F62283AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BF7FB20-A6B2-4CC7-B34D-5F4F62283AE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
